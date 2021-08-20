@@ -12,7 +12,15 @@
 ```
     tsc
 ```
+- Compile with watch
+```
+    tsc --watch
+```
 - To create a typescript config file
 ```
     tsc --init
+```
+- To run a js file
+```
+    node <filename>
 ```
