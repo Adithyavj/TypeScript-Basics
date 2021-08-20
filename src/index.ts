@@ -36,10 +36,10 @@ enum Direction1 {
     Left,
     Right
 }
-console.log(Direction1.Up);
-console.log(Direction1.Down);
-console.log(Direction1.Left);
-console.log(Direction1.Right);
+// console.log(Direction1.Up);
+// console.log(Direction1.Down);
+// console.log(Direction1.Left);
+// console.log(Direction1.Right);
 
 enum Direction2 {
     Up = 'Up',
@@ -48,10 +48,10 @@ enum Direction2 {
     Right = 'Right'
 }
 
-console.log(Direction2.Up);
-console.log(Direction2.Down);
-console.log(Direction2.Left);
-console.log(Direction2.Right);
+// console.log(Direction2.Up);
+// console.log(Direction2.Down);
+// console.log(Direction2.Left);
+// console.log(Direction2.Right);
 
 
 // Objects {} 
@@ -73,3 +73,70 @@ const user: User = {
 let cid: any = 1;
 // let customerId = <number>cid; // adding type assertion - Method 1
 let customerId = cid as number;  // adding type assertion - Method 2
+
+
+// Functions
+function addNum(x: number, y: number): number {
+    return x + y;
+}
+
+// function with no return type
+function log(message: string | number): void {
+    console.log(message);
+}
+
+// Interface
+
+interface UserInfo {
+    readonly id: number; // readonly property
+    name: string;
+    age?: number; // optional property
+}
+
+const user1: UserInfo = {
+    id: 1,
+    name: 'Amal'
+}
+
+
+// type can be used with primitives and unions
+
+type Point = string | number
+const p1: Point = 1;
+
+// we can user interfaces with functions
+interface MathFunc {
+    (x: number, y: number): number // interface with a function
+}
+
+const add: MathFunc = (x: number, y: number): number => x + y; // define what the function does , here addition
+const sub: MathFunc = (x: number, y: number): number => x - y; // define what the function does , here subtraction
+
+
+// Classes
+// classes are used to create objects, we can create multiple person objects with this class
+class Person implements PersonInterface {
+    id: number; // public by default (Access modifiers)
+    name: string;
+
+    // runs when we instantiate the class
+    constructor(id: number, name: string) {
+        this.id = id;
+        this.name = name;
+    }
+
+    register() {
+        return `${this.name} is now registered`;
+    }
+}
+
+interface PersonInterface {
+    id: number;
+    name: string;
+    register(): string;
+}
+
+const adithya = new Person(1, 'Adithya'); // create a new object of type person in the const adithya
+const mike = new Person(2, 'Mike');
+
+

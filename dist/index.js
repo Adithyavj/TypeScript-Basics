@@ -31,10 +31,10 @@ var Direction1;
     Direction1[Direction1["Left"] = 2] = "Left";
     Direction1[Direction1["Right"] = 3] = "Right";
 })(Direction1 || (Direction1 = {}));
-console.log(Direction1.Up);
-console.log(Direction1.Down);
-console.log(Direction1.Left);
-console.log(Direction1.Right);
+// console.log(Direction1.Up);
+// console.log(Direction1.Down);
+// console.log(Direction1.Left);
+// console.log(Direction1.Right);
 var Direction2;
 (function (Direction2) {
     Direction2["Up"] = "Up";
@@ -42,10 +42,6 @@ var Direction2;
     Direction2["Left"] = "Left";
     Direction2["Right"] = "Right";
 })(Direction2 || (Direction2 = {}));
-console.log(Direction2.Up);
-console.log(Direction2.Down);
-console.log(Direction2.Left);
-console.log(Direction2.Right);
 const user = {
     id: 1,
     name: 'Akhil'
@@ -55,3 +51,32 @@ const user = {
 let cid = 1;
 // let customerId = <number>cid; // adding type assertion - Method 1
 let customerId = cid; // adding type assertion - Method 2
+// Functions
+function addNum(x, y) {
+    return x + y;
+}
+// function with no return type
+function log(message) {
+    console.log(message);
+}
+const user1 = {
+    id: 1,
+    name: 'Amal'
+};
+const p1 = 1;
+const add = (x, y) => x + y; // define what the function does , here addition
+const sub = (x, y) => x - y; // define what the function does , here subtraction
+// Classes
+// classes are used to create objects, we can create multiple person objects with this class
+class Person {
+    // runs when we instantiate the class
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name} is now registered`;
+    }
+}
+const adithya = new Person(1, 'Adithya'); // create a new object of type person in the const adithya
+const mike = new Person(2, 'Mike');
