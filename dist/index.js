@@ -81,6 +81,7 @@ class Person {
 const adithya = new Person(1, 'Adithya'); // create a new object of type person in the const adithya
 const mike = new Person(2, 'Mike');
 // extending a class (inheritance)
+// SubClass
 class Employee extends Person {
     constructor(id, name, position) {
         super(id, name); // initialize in Person
@@ -92,3 +93,13 @@ const emp = new Employee(3, 'Vajid', 'Developer');
 // console.log(emp.name);
 // console.log(emp.position);
 // console.log(emp.register());
+// Generics - used to build reusable components
+// T is type - while calling, we can use the type
+// placeholder of the type
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+let stringArray = getArray(['A', 'B', 'C', 'D']);
+// before adding generics we don't get any error here
+// numArray.push('Hai');
