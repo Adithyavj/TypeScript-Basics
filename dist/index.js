@@ -46,4 +46,12 @@ console.log(Direction2.Up);
 console.log(Direction2.Down);
 console.log(Direction2.Left);
 console.log(Direction2.Right);
-// Objects
+const user = {
+    id: 1,
+    name: 'Akhil'
+};
+// Type Assertion 
+// - explicitly telling the complier that we want to treat an entity as a different type
+let cid = 1;
+// let customerId = <number>cid; // adding type assertion - Method 1
+let customerId = cid; // adding type assertion - Method 2
