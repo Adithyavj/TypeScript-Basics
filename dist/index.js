@@ -80,3 +80,15 @@ class Person {
 }
 const adithya = new Person(1, 'Adithya'); // create a new object of type person in the const adithya
 const mike = new Person(2, 'Mike');
+// extending a class (inheritance)
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name); // initialize in Person
+        this.position = position;
+    }
+}
+const emp = new Employee(3, 'Vajid', 'Developer');
+// console.log(emp.id);
+// console.log(emp.name);
+// console.log(emp.position);
+// console.log(emp.register());
